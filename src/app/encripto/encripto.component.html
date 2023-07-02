@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="typedEncodeValue"/>
+<button (click) = "handleEncodeClick()" type="button">Encode</button>
+<input type="text" [(ngModel)]="typedDecodeValue"/>
+<button (click) = "handleDecodeClick()" type="button">Decode</button>
+
+<h2>Encode</h2>
+<h4>{{ postJsonValue.data.outputString }}</h4>
+<h2>Decode</h2>
+<h4>{{ getJsonValue.data.outputString }}</h4>
