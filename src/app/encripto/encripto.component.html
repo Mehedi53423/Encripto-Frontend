@@ -1,9 +1,20 @@
-<input type="text" [(ngModel)]="typedEncodeValue"/>
-<button (click) = "handleEncodeClick()" type="button">Encode</button>
-<input type="text" [(ngModel)]="typedDecodeValue"/>
-<button (click) = "handleDecodeClick()" type="button">Decode</button>
-
-<h2>Encode</h2>
-<h4>{{ postJsonValue.data.outputString }}</h4>
-<h2>Decode</h2>
-<h4>{{ getJsonValue.data.outputString }}</h4>
+<div class="flex item-center justify-center">
+    <div class="w-5/6 flex">
+        <div class="flex flex-col w-1/2">
+            <div class="text-center font-bold text-lg">Encode</div>
+            <div class="flex justify-center">
+                <input class="border border-black mr-2 w-3/4 rounded-lg" type="text" [(ngModel)]="typedEncodeValue"/>
+                <button (click) = "handleEncodeClick()" type="button" class="border border-black w-20 bg-green-300 text-lg rounded-lg">Encode</button>
+            </div>
+            <div>{{ postJsonValue.data.outputString }}</div>
+            </div>
+        <div class="lex flex-col w-1/2">
+            <div class="text-center font-bold text-lg">Decode</div>
+            <div class="flex items-center justify-center">
+                <input class="border border-black mr-2 w-3/4 rounded-lg" type="text" [(ngModel)]="typedDecodeValue"/>
+                <button (click) = "handleDecodeClick()" type="button" class="border border-black w-20 bg-green-300 text-lg rounded-lg">Decode</button>
+            </div>
+            <div>{{ getJsonValue.data.outputString }}</div>
+        </div>
+    </div>
+</div>
