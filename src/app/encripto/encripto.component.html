@@ -1,20 +1,22 @@
 <div class="flex item-center justify-center">
     <div class="w-5/6 flex">
         <div class="flex flex-col w-1/2">
-            <div class="text-center font-bold text-lg">Encode</div>
+            <div class="text-center font-bold text-lg mb-2">Encode</div>
             <div class="flex justify-center">
-                <input class="border border-black mr-2 w-3/4 rounded-lg" type="text" [(ngModel)]="typedEncodeValue"/>
+                <input class="border border-black mr-2 w-3/4 rounded-lg text-center text-lg" type="text" placeholder="Enter Your Code" [(ngModel)]="typedEncodeValue"/>
                 <button (click) = "handleEncodeClick()" type="button" class="border border-black w-20 bg-green-300 text-lg rounded-lg">Encode</button>
+                <button class="border border-black ml-2 w-20 bg-green-300 text-lg rounded-lg">Clear</button>
             </div>
-            <div>{{ postJsonValue.data.outputString }}</div>
+            <div class="text-lg text-center mt-2">{{ postJsonValue.data.outputString }}</div>
             </div>
         <div class="lex flex-col w-1/2">
-            <div class="text-center font-bold text-lg">Decode</div>
+            <div class="text-center font-bold text-lg mb-2">Decode</div>
             <div class="flex items-center justify-center">
-                <input class="border border-black mr-2 w-3/4 rounded-lg" type="text" [(ngModel)]="typedDecodeValue"/>
+                <input class="border border-black mr-2 w-3/4 rounded-lg text-center text-lg" type="text" placeholder="Enter Your Code" [(ngModel)]="typedDecodeValue"/>
                 <button (click) = "handleDecodeClick()" type="button" class="border border-black w-20 bg-green-300 text-lg rounded-lg">Decode</button>
+                <button class="border border-black ml-2 w-20 bg-green-300 text-lg rounded-lg">Clear</button>
             </div>
-            <div>{{ getJsonValue.data.outputString }}</div>
+            <div class="text-lg text-center mt-2">{{ getJsonValue.data.outputString }}</div>
         </div>
     </div>
 </div>
